@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: auto;
+  content: "";
+  background-image: url(./background_image.jpg);
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  /* opacity: 0.75; */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  min-height: 100%;
+
+}
+
+body::after {
+  
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+
+
+.experience {
+  background: #f4f4f4;
+  margin: 0;
+  height:fit-content;
+  color: black;
+}
+
+
+
+.experience h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience .floatLeft {
+  float: left;
+}
+
+.experience p {
+  float: left;
+  text-indent: 20pt;
+}
+
+.experience .floatRight {
+  float: right;
+  text-align: right;
+}
+
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.nav {
+  float:left;
+  height:100vh;
+  font-size: 150%;
+}
+.sidebar{
+  max-width: 200px;
+  min-width: 200px;
+  color: gold;
+  z-index: 3;
+  position: fixed;
+}
+.nav a:hover{
+  background-color:lightblue; 
+}
+
+.rightSideComponent {
+  float:right;
+  width: calc(100vw - 220px);
+  padding-right: 20px;
+  color: gold;
+}
+
+#profilePicture {
+  height: 10vh;
+  min-height: 120px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+#header {
+  margin-top: 10px;
+  min-height: 130px;
+  max-height: 130px;
+  color: gold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#staticHeaderText {
+  z-index: 2;
+}
+#resumeButton {
+  
+  float: right;
+  transition: 0.7s;
+  font-size: 20px;
+}
+
+#resumeButton:hover{
+  transform: scale(1.2);
+}
+
+
+.icon {
+  color: gold;
+}
+
+.clickAbleText {
+  cursor: pointer;
+}
+
+#educationArea {
+  display: flex;
+  /* margin-right: 10%; */
+  min-width: 1000px;
+  justify-content: center;
+}
+
+.educationCard {
+  margin-right: 10px;
+  color: black;
+  
+}
+.educationCard .card {
+  width: 450px;
+  min-height: 500px;
+  /* height: 500px; */
+  border: 1px solid black;
+ 
+}
+
+.sectionTitle {
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+}
+
+#educations {
+  min-width: calc(100vh - 400px);
+}
