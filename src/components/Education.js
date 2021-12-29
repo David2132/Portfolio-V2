@@ -1,7 +1,7 @@
 import { useState } from "react"; 
 import { Card } from "react-bootstrap";
-import ULL from "../ULL.jpg"
-import BHS from "../BHS.jpg"
+import ULL from "../images/ULL.jpg"
+import BHS from "../images/BHS.jpg"
 const Education = ({education}) => {
     const [showMore, setShowMore] = useState(false);
     const changeShowMore = () => {

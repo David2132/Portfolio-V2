@@ -2,7 +2,7 @@ import React from "react";
 import {Nav} from "react-bootstrap";
 import {GiTiedScroll, GiSkills, GiLaptop} from "react-icons/gi";
 import {BsFillPersonFill} from "react-icons/bs";
-import {FaHardHat} from "react-icons/fa";
+import {FaAward, FaHardHat} from "react-icons/fa";
 
 
 
@@ -25,6 +25,11 @@ const Sidebar = () => {
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link href="/experience"><FaHardHat/> Experience</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link href="/awards" >
+                <FaAward/> Awards
+                </Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link href="/skills" >

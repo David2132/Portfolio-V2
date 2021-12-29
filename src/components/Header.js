@@ -2,9 +2,10 @@
 import { Modal, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import {BsFillPinMapFill,BsLinkedin} from "react-icons/bs";
-import {GrMapLocation, GrGithub} from "react-icons/gr";
-import ProfilePicture from "../profile_picture.jpg";
+import {GrGithub} from "react-icons/gr";
+import ProfilePicture from "../images/profile_picture.jpg";
 import {MdEmail} from "react-icons/md";
+
 const Header = () => {
     const [showModal, setModal] = useState(false);
 
