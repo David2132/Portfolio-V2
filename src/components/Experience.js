@@ -5,7 +5,6 @@ const Experience = ({experience}) => {
 
     const changeDescription = () => {
         setShowDescription(!showDescription)
-        console.log(showDescription)
     }
     return <Accordion.Item className='experience' onClick={changeDescription} eventKey={experience.id}>
             <Accordion.Header>
@@ -29,8 +28,15 @@ const Experience = ({experience}) => {
                 </div>
                 </Accordion.Header>
             <Accordion.Body>
-               
-                    {experience.description}
+                Some of my responsibilies while working at {experience.employer}:
+                <ul class="multi-column">
+                    {experience.description.map((responsibility) => (
+                        <li>
+                            {responsibility}
+                        </li>
+                    ))}
+                </ul>
+                    
             </Accordion.Body>
     </Accordion.Item>
 }

@@ -76,7 +76,7 @@ body {
 
 
 .experience {
-  background: #f4f4f4;
+  background: rgb(255, 235, 205);
   margin: 0;
   height:fit-content;
   color: black;
@@ -304,4 +304,38 @@ footer {
   position: relative;
   top: 10%;
   transform: translateY(-50%);
+}
+
+#projectsArea {
+  color: black;
+  background-color: rgb(255, 235, 205);
+  height: 80vh;
+  overflow: auto;
+  border-style:solid ;
+}
+
+.project {
+  margin: 5px;
+  border-bottom: solid;
+  padding: 5px;
+}
+
+#aboutMeArea {
+  
+  background-image: url(./images/aboutMeBackground.jpg);
+  height: 80vh;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* margin: ; */
+  color: black;
+  padding:5%;
+  font-family: cursive;
+}
+
+.multi-column {
+  list-style-position: inside;
 }

@@ -32,9 +32,15 @@ const Education = ({education}) => {
                         <>
                             While seeking this level of education:
                             <br/>
+                            <ul>
                             {
-                                education.description
+                                education.description.map((item) => (
+                                    <li>
+                                        {item}
+                                    </li>
+                                ))
                             }
+                            </ul>
                             <br/>
                         </>:
                         ""

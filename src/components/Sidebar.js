@@ -21,15 +21,10 @@ const Sidebar = () => {
                 <Nav.Link href="/aboutme"><BsFillPersonFill/> About Me</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/education"><GiTiedScroll/> Education</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
                 <Nav.Link href="/experience"><FaHardHat/> Experience</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/awards" >
-                <FaAward/> Awards
-                </Nav.Link>
+                <Nav.Link href="/projects"> <GiLaptop/> Projects</Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link href="/skills" >
@@ -37,8 +32,14 @@ const Sidebar = () => {
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/projects"> <GiLaptop/> Projects</Nav.Link>
+                <Nav.Link href="/education"><GiTiedScroll/> Education</Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+                <Nav.Link href="/awards" >
+                <FaAward/> Awards
+                </Nav.Link>
+            </Nav.Item>
+            
             </Nav>
           
         </div>

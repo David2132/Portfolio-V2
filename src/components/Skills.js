@@ -15,7 +15,9 @@ const Skills = ({skills}) => {
                 {
                     skills.map((skill) => (
                         <div>
-                        <Skill key={skill.id} skill={skill}/>
+                        <Skill 
+                        key={skill.id} 
+                        skill={skill}/>
                         </div>
                     ))
                 }

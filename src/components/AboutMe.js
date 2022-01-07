@@ -1,12 +1,16 @@
-import { useState } from "react"; 
 
 const AboutMe = ({description}) => {
     return (
         <div className="rightSideComponent">
-        <h3>
+        <h3 className="sectionTitle" >
             About Me
         </h3>
-        
+        <div id="aboutMeArea">
+            <h5>
+                {description}
+            </h5>
+            
+        </div>
     </div>
     )
 }

@@ -24,7 +24,12 @@ function App() {
         location: "Baton Rouge, Louisiana",
         start: "February 2019",
         end: "August 2019",
-        description: "Implemented a full stack application to allow a perficient to be used during career fairs.",
+        description: ["Execute the methods of Agile ",
+          "Full Stack development using React, Spring Boot, MySql",
+          "Full Stack development using  Angular, NodeJs, MySql",
+          "Front End development using React",
+          "Pair programed applications"
+          ],
         position: "Software Developer Intern"
     }, 
     {
@@ -33,7 +38,13 @@ function App() {
         location: "Lafayette, Louisiana",
         start: "March 2018",
         end: "February 2020",
-        description: "Implemented a full stack application to allow a perficient to be used during career fairs.",
+        description: ["Taking stock of restaurants front and kitchen supplies and reordering where necessary",
+          "Make sure food quality is up to restaurant’s expectations",
+          "Check for Customers’ Satisfaction", 
+          "Make sure restaurants remained clean",
+          "Handle situations presented", 
+          
+          ],
         position: "Manager/Server"
     }, 
     {
@@ -42,6 +53,13 @@ function App() {
         location: "Baton Rouge, Louisiana",
         start: "March 2020",
         end: "June 2020",
+        description: ["Design and code gui application for gas pumps",
+          "Full stack development using JavaScript, Html, Django, PostGres",
+          "Add insight to current issues needed to be fixed",
+          "Brainstormed solutions to database issues",
+          "Schedule meetings with cowokers and owner",
+          "Carrying out research sessions to find data that supports the needs of the business"
+          ],
         position: "Full Stack Developer - Part Time"
     }, 
     {
@@ -50,6 +68,19 @@ function App() {
         location: "Houston, Texas",
         start: "June 2020",
         end: "Present",
+        description: ["Gui application development to aid simulation", 
+          "RHEL6 to RHEL8 upgrade for applications", 
+          "Precision time upgrade for applications",
+          "Developer biweekly reports",
+          "Demo applications",
+          "Create fest/assertJ test code",
+          "Database entity creations in oracle",
+          "Brainstorm ideas for database/gui designs",
+          "Carrying out research sessions to find data that supports the need of users",
+          "Agile development to meet user's expectations",
+          "Maintaining and application documention",
+          "Schedule meetings with cowokers and users"
+          ],
         position: "Software Engineer"
     }
   ])
@@ -60,7 +91,11 @@ function App() {
         school: "Bogalusa High School",
         location: "Bogalusa, Louisiana",
         completed: "May 2016",
-        description: "Implemented a full stack application to allow a perficient to be used during career fairs.",
+        description: ["Rifle Team - JROTC",
+          "Drill Team - JROTC",
+          "Over 40 community service hours for JROTC",
+          "Graduated as Salutatorian",
+          ],
         level: "High School",
         gpa: "3.9",
         major: null,
@@ -71,7 +106,13 @@ function App() {
         school: "University of Louisiana at Lafayette",
         location: "Lafayette, Louisiana",
         completed: "May 2020",
-        description: "Implemented a full stack application to allow a perficient to be used during career fairs.",
+        description: ["Obtained Multiple Dean’s List",
+          "Software Developer at IBM",
+          "Part time full stack developer at 360Fuel",
+          "Nursing major for two years",
+          "Tested out of two classes",
+          "Graduated with 160 credit hours in four years"
+          ],
         level: "College",
         gpa: "3.6",
         major: "Computer Science",
@@ -160,7 +201,7 @@ function App() {
     },
     {
       id: 9,
-      skill: "PostGresSQL",
+      skill: "PostgresSQL",
       icon: "SiPostgresql"
     },
     {
@@ -215,6 +256,66 @@ function App() {
     },
   ])
 
+  const [projects, setProjects] = useState([
+    {
+      id: 1,
+      title: "Recruitment App",
+      description: "A frontend web application which allow the user add/mutate candidates information during an interview at a hosted IBM career fair. The user can also see the list of candidates and see the offers given by other users and allows to see which interviewer is ready for another candidate.",
+      dateCreated: "July 2019",
+      tools: "Angular 8, Postman, Jasmine & Karma, HTML5, CSS3"
+    },
+    {
+      id: 2,
+      title: "Employee Site",
+      description: "Full Stack web application allowing users to access the list of employees and mutate the list/employee. This project has two different stacks used to code the frontend and backend. One iteration used Angular for frontend and NodeJs as backend. The second iteration used React as frontend and SpringBoot as the backend.",
+      dateCreated: "July 2019",
+      tools: "Spring Boot, React, Angular 8, NodeJs, MySQL, Postman, HTML5, CSS, JSON"
+    },
+    {
+      id: 3,
+      title: "IOS Development Course",
+      description: "A class to instruct individuals on IOS mobile application development development on Mac OS. Some projects include coding: a calculator, a photo album which was connected to a Restful API, and more.",
+      dateCreated: "Fall 2019",
+      tools: "XCode, SwiftUI, Swift"
+    },
+    {
+      id: 4,
+      title: "Hospital Full Stack",
+      description: "A Full Stack project which kept track of the patients' information (name, gender, birthdate, diagnonis, etc), the employees' information (name, schedule, working floor number, position, etc), the hospital's count of medicication on hand, the medicaiton requested from the hospital to a pharmaceutical company, and the pharmaceutical company's on hand medication. This was a school project and idea was thought of by an intern at a medical center.",
+      dateCreated: "Spring 2020",
+      tools: "React, NodeJs, MySQL, HTML5, CSS3"
+    },
+    {
+      id: 5,
+      title: "Applications upgrade to RHEL 8 upgrade from RHEL 6",
+      description: "Convert and test multiple applications from RHEL 6 to RHEL 8. Projects with issues needed some type of code changes, peer reviews, and documentation changes.",
+      dateCreated: "December 2020 - April 2021",
+      tools: "Netbeans, Linux, RHEL 6, RHEL 8, Java"
+    },
+    {
+      id: 6,
+      title: "Application upgrade from Miliseconds to Nanoseconds",
+      description: "A task to change the FreeFlyer code for more precision in calculations. This change involved using a different version of FreeFlyer and its methods. While changing some of the FreeFlyer code, test files had to be reran and adjusted based on the new precision.",
+      dateCreated: "June 2021 - August 2021",
+      tools: "Netbeans, Java, FreeFlyer"
+    },
+    {
+      id: 7,
+      title: "Vav Gui",
+      description: "A graphical user inferace which allows the users to add force models based on time in the database. The added data is then used in a different application for a space simulation to help with projection of a spacecraft in orbit. The gui allows the users to import/export to be used on other activities if data is not available.",
+      dateCreated: "September 2021 - January 2022",
+      tools: "Java, JavaSwing, AssertJ, Java Persistence"
+    },
+    {
+      id: 8,
+      title: "Portfolio V2",
+      description: "Portfolio V2 is a Full Stack web application to showcase my projects and resume in a well designed format.",
+      dateCreated: "December 2021",
+      tools: "React, SpringBoot, HTML5, CSS3, React-Bootstrap PostgresSQL"
+    }
+  ])
+
+  const description = ""
   return (
     <div className="App">
       <Sidebar style={{"float":'left'}}/>
@@ -222,7 +323,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/aboutme">
-            <AboutMe/>
+            <AboutMe description={description}/>
           </Route>
           <Route path="/education">
             { educations.length > 0 ?
@@ -249,7 +350,7 @@ function App() {
             <Skills skills={skills}/>
           </Route>
           <Route path="/projects">
-            <Projects/>
+            <Projects projects={projects.reverse()}/>
           </Route>
         </Switch>
       </Router>

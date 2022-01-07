@@ -5,7 +5,7 @@ import {BsFillPinMapFill,BsLinkedin} from "react-icons/bs";
 import {GrGithub} from "react-icons/gr";
 import ProfilePicture from "../images/profile_picture.jpg";
 import {MdEmail} from "react-icons/md";
-
+import resume from "../images/resume.pdf"
 const Header = () => {
     const [showModal, setModal] = useState(false);
 
@@ -21,9 +21,11 @@ const Header = () => {
         <header className="rightSideComponent" id="header">
             <div >
                 <img src={ProfilePicture} id="profilePicture"/>
-                <Button variant="success" id='resumeButton' style={{"color": "gold"}}> 
-                    View Resume →
-                </Button>
+                <a href={resume} without rel="noopener noreferrer" target="_blank">
+                    <Button variant="success" id='resumeButton' style={{"color": "gold"}}> 
+                        View Resume →
+                    </Button>
+                </a>
                 <h3>David Duong</h3>
                 <h5>
                     <a class="icon" onClick={copyEmail} style={{ "marginRight":"5px", "cursor": "pointer"}}>
@@ -55,7 +57,6 @@ const Header = () => {
 
             </Modal>
 
-  
         </header>
     )
 }

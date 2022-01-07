@@ -1,7 +1,3 @@
-import { useState } from "react"; 
-// import {GiProgression} from "react-icons/gi"
-import {FaJava} from "react-icons/fa"
-
 
 const Award = ({award}) => {
 
