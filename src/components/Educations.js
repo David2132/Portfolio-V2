@@ -4,7 +4,7 @@ import Education from "./Education";
 const Educations = ({educations}) => {
     console.log(educations.length)
     return (
-        <div className="rightSideComponent" id="educations">
+        <div>
         <h3 className="sectionTitle">
             Education
         </h3>

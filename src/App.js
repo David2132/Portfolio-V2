@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import { useState } from "react"
 import {
   BrowserRouter as Router,
+  HashRouter,
   Route,
   Switch,
   Link,
@@ -16,6 +17,8 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import AboutMe from "./components/AboutMe";
 import Awards from "./components/Awards";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
 function App() {
   const [experiences, setExperience] = useState([
     {
@@ -23,26 +26,27 @@ function App() {
         employer: "IBM",
         location: "Baton Rouge, Louisiana",
         start: "February 2019",
-        end: "August 2019",
-        description: ["Execute the methods of Agile ",
+        end: "September 2019",
+        description: ["Learned and excuted the methods of Agile for projects",
+          "Proactively delivered products to users before deadlines",
           "Full Stack development using React, Spring Boot, MySql",
           "Full Stack development using  Angular, NodeJs, MySql",
           "Front End development using React",
-          "Pair programed applications"
+          "Collaborated with team member during development"
           ],
-        position: "Software Developer Intern"
+        position: "Application Development Specialist Intern"
     }, 
     {
         id: 2,
         employer: "Saigon Noodles",
         location: "Lafayette, Louisiana",
-        start: "March 2018",
+        start: "May 2019",
         end: "February 2020",
-        description: ["Taking stock of restaurants front and kitchen supplies and reordering where necessary",
-          "Make sure food quality is up to restaurant’s expectations",
-          "Check for Customers’ Satisfaction", 
-          "Make sure restaurants remained clean",
-          "Handle situations presented", 
+        description: ["Maintained adequate inventory",
+          "Trained new employees",
+          "Focused on Customers’ Satisfaction", 
+          "Maintained restaurant's appearance",
+          "Cultivated coworkers", 
           
           ],
         position: "Manager/Server"
@@ -51,14 +55,13 @@ function App() {
         id: 3,
         employer: "360Fuel",
         location: "Baton Rouge, Louisiana",
-        start: "March 2020",
+        start: "February 2020",
         end: "June 2020",
-        description: ["Design and code gui application for gas pumps",
+        description: ["Developed a gui application displayed at the gas pumps",
+          "Proactively scheduled meetings with cowokers and owner",
           "Full stack development using JavaScript, Html, Django, PostGres",
-          "Add insight to current issues needed to be fixed",
-          "Brainstormed solutions to database issues",
-          "Schedule meetings with cowokers and owner",
-          "Carrying out research sessions to find data that supports the needs of the business"
+          "Collaborated with team members to resolve issues",
+          "Proactively researched technologies and methods to enhance business and users' experience"
           ],
         position: "Full Stack Developer - Part Time"
     }, 
@@ -75,11 +78,9 @@ function App() {
           "Demo applications",
           "Create fest/assertJ test code",
           "Database entity creations in oracle",
-          "Brainstorm ideas for database/gui designs",
-          "Carrying out research sessions to find data that supports the need of users",
-          "Agile development to meet user's expectations",
-          "Maintaining and application documention",
-          "Schedule meetings with cowokers and users"
+          "Collaborated with team members gui and database design",
+          "Creating and maintaing applications' documention",
+          "Productively scheduled meetings with team members and users"
           ],
         position: "Software Engineer"
     }
@@ -260,7 +261,7 @@ function App() {
     {
       id: 1,
       title: "Recruitment App",
-      description: "A frontend web application which allow the user add/mutate candidates information during an interview at a hosted IBM career fair. The user can also see the list of candidates and see the offers given by other users and allows to see which interviewer is ready for another candidate.",
+      description: "A frontend web application which allow the user to effeciently add/edit candidates information during an interview at a hosted IBM career fair. The user can also see the list of candidates and see the offers given by other users and allows to see which interviewer is ready for another candidate.",
       dateCreated: "July 2019",
       tools: "Angular 8, Postman, Jasmine & Karma, HTML5, CSS3"
     },
@@ -309,51 +310,65 @@ function App() {
     {
       id: 8,
       title: "Portfolio V2",
-      description: "Portfolio V2 is a Full Stack web application to showcase my projects and resume in a well designed format.",
+      description: "Portfolio V2 is a web application to showcase my projects and resume in a well designed format.",
       dateCreated: "December 2021",
-      tools: "React, SpringBoot, HTML5, CSS3, React-Bootstrap PostgresSQL"
+      tools: "React, HTML5, CSS3, React-Bootstrap "
     }
   ])
+  console.log("hi")
+  console.log(process.env.PUBLIC_URL)
+  const description = " Hello, I am David Duong. I am a software engineer working at the NASA Johnson Space Center in Houston, Texas employed through KBR. Even though I graduated with a computer science degree, I was actually majoring in nursing my first two years of school. After two years of nursing school and having practical experience in the hospital, I realized a nursing career was not for me. With some inspiration from others, I decided to try coding and instantly fell in love. With this new passion of coding, I was able to test out of two classes, obtain an internship at IBM, be a part time full stack developer at 360Fuel, graduate with over 160 credit hours, and land a position as  a contracting software engineer at the NASA Johnson Space Center within two years of changing my major. \
+  My eagerness to learn and adapt to coding led me to obtaining the position ‘Application Development Specialist Intern’ at IBM six month after changing my major to computer science. There, I was able to learn frontend development, backend development, database concepts, and agile methods through the individual/team given projects. I even led a few demos on some frontend projects which were used during the IBM career fair.\
+  Six months after my internship at IBM, I received an offer to be a part time ‘Full Stack Developer’ at 360Fuel. This is where I developed a lot of my creative development in frontend development. I was in charge of developing/maintaining the user interface shown at the gasoline pumps, including advertisement, gas prices,user’s gas charges, etc.\
+  A month after I obtained my bachelor’s degree, I started my current position at NASA Johnson Space Center. Here, I did many application upgrades (upgrades to Red Hat 6 to Red Hat 8, time upgrade from millisecond to nanosecond, deprecated code, etc.), create test files, create a graphical user interface called VAV, and more. VAV is a user interface to allow the adjustment of vents to be stored. Once stored, the stored vents are used when running spacecraft simulation during travel. This is my most notable project because of how much I have been involved with it from developing to demoing to users to documentation.\
+  Problem solving and creating something from an idea to being able to be used by others is what gives me passion from coding. I will always consider myself as a “studious person,” always trying to stay tuned with the latest technologies/methods to efficiently code and try to apply the knowledge to what I am developing today. \
+  I am seeking more opportunities to chase my passion in development."
 
-  const description = ""
   return (
     <div className="App">
-      <Sidebar style={{"float":'left'}}/>
       <Header />
-      <Router>
-        <Switch>
-          <Route path="/aboutme">
-            <AboutMe description={description}/>
-          </Route>
-          <Route path="/education">
-            { educations.length > 0 ?
-              <Educations
-              educations={educations.reverse()} 
-              />
+      <div className="contentBody" style={{"minHeight": "75vh"}}> 
+        <HashRouter basename={process.env.PUBLIC_URL}>
+          <Switch>
+            <Route path="/" exact={true}>
+              <Home />
+            </Route>
+            <Route path="/aboutme">
+              <AboutMe description={description}/>
+            </Route>
+            <Route path="/education">
+              { educations.length > 0 ?
+                <Educations
+                educations={educations.reverse()} 
+                />
 
-            : "Error has occurred while trying to connect to the backend. Please try again later!"  
-            }
-            
-          </Route>
-          <Route path="/experience">
-            { experiences.length > 0 ?
-              <Experiences 
-                experiences={experiences.reverse()} 
-              />
-            : "Error has occurred while trying to connect to the backend. Please try again later!"  
-            }
-          </Route>
-          <Route path="/awards">
-            <Awards awards={awards.reverse()}/>
-          </Route>
-          <Route path="/skills">
-            <Skills skills={skills}/>
-          </Route>
-          <Route path="/projects">
-            <Projects projects={projects.reverse()}/>
-          </Route>
-        </Switch>
-      </Router>
+              : "Error has occurred while trying to connect to the backend. Please try again later!"  
+              }
+              
+            </Route>
+            <Route path="/experience">
+              { experiences.length > 0 ?
+                <Experiences 
+                  experiences={experiences.reverse()} 
+                />
+              : "Error has occurred while trying to connect to the backend. Please try again later!"  
+              }
+            </Route>
+            <Route path="/awards">
+              <Awards awards={awards.reverse()}/>
+            </Route>
+            <Route path="/skills">
+              <Skills skills={skills}/>
+            </Route>
+            <Route path="/projects">
+              <Projects projects={projects.reverse()}/>
+            </Route>
+          </Switch>
+        </HashRouter>
+        
+      
+      </div>
+      <Footer/>
     </div>
   );
 }

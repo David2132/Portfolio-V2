@@ -10,17 +10,17 @@ const Experience = ({experience}) => {
             <Accordion.Header>
                 <div style={{"width":"95%"}}>
                     <div className="floatLeft">
-                        <h4>
+                        <span className="floatLeft" style={{"fontWeight":"bold"}}>
                             {experience.employer} 
                             
-                        </h4>
+                        </span>
                         <br/>
                             {experience.position} 
                     </div>
                     <div className="floatRight">
-                        <h4 >
+                        <span  style={{"fontWeight":"bold"}}>
                             {experience.start} - {experience.end}
-                        </h4>
+                        </span>
                         <br/>
                         
                         {experience.location}

@@ -82,29 +82,6 @@ body {
   color: black;
 }
 
-
-
-.experience h4 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.experience .floatLeft {
-  float: left;
-}
-
-.experience p {
-  float: left;
-  text-indent: 20pt;
-}
-
-.experience .floatRight {
-  float: right;
-  text-align: right;
-}
-
-
 .add-form {
   margin-bottom: 40px;
 }
@@ -147,42 +124,71 @@ footer {
 
 .nav {
   float:left;
-  height:100vh;
-  font-size: 150%;
+  height:auto;
+  font-size: 2vw;
+ 
+  
 }
+
+#exitSidebar {
+  padding: .5rem 1rem;
+  font-size: 2vw;
+  color: #0d6efd;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
 .sidebar{
-  max-width: 200px;
-  min-width: 200px;
-  color: gold;
-  z-index: 3;
+  width: 20vw;
+  min-width: 100px;
+  background-color:#F8F9FA;
   position: fixed;
+  z-index: 3;
+  left: -150%;
+  border-right: solid 2px black;
+  border-bottom: solid 2px black;
+  /* height: 100vh; */
+  transition: 350ms;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.sidebar.active{
+  left: 0;
+  
 }
 .nav a:hover{
   background-color:lightblue; 
 }
 
-.rightSideComponent {
-  float:right;
-  width: calc(100vw - 220px);
-  padding-right: 20px;
+.nav-item {
+  width: 100%;
+}
+.contentBody {
+  width: 100vw;
   color: gold;
+  /* height: 90vh; */
+  /* margin: 0 2% 0 2%; */
+  padding: 0 1% 0 1%;
 }
 
 #profilePicture {
   height: 10vh;
-  min-height: 120px;
   border-radius: 50%;
   float: left;
   margin-right: 10px;
 }
 
 #header {
-  margin-top: 10px;
-  min-height: 130px;
-  max-height: 130px;
+  margin: 1%;
+  
   color: gold;
   margin-top: 10px;
   margin-bottom: 10px;
+  
 }
 
 #staticHeaderText {
@@ -192,7 +198,8 @@ footer {
   
   float: right;
   transition: 0.7s;
-  font-size: 20px;
+  font-size: auto;
+  max-width:20%;
 }
 
 #resumeButton:hover{
@@ -209,20 +216,22 @@ footer {
 }
 
 #educationArea {
-  display: flex;
-  /* margin-right: 10%; */
-  min-width: 1000px;
+  display: grid;
   justify-content: center;
 }
 
 .educationCard {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   color: black;
+  padding-bottom: 5px;
+  width: auto;
+  max-width: 485px;
   
 }
 .educationCard .card {
-  width: 450px;
-  min-height: 500px;
+  width: auto;
+  max-width: 485px;
+  min-height: auto;
   /* height: 500px; */
   border: 1px solid black;
  
@@ -230,12 +239,10 @@ footer {
 
 .sectionTitle {
   text-align: center;
-  width: 100%;
   text-decoration: underline;
-}
-
-#educations {
-  min-width: calc(100vh - 400px);
+  display: grid;
+  justify-content: center;
+  width: 100%;
 }
 
 #awardsArea {
@@ -252,7 +259,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   border: 1px solid;
-  padding: 10px;
+  /* padding: 10px; */
   box-shadow: 10px 20px black;
 
 }
@@ -312,6 +319,7 @@ footer {
   height: 80vh;
   overflow: auto;
   border-style:solid ;
+  max-width: 100%;
 }
 
 .project {
@@ -323,7 +331,7 @@ footer {
 #aboutMeArea {
   
   background-image: url(./images/aboutMeBackground.jpg);
-  height: 80vh;
+  min-height: 70vh;
   width: 100%;
   background-repeat: no-repeat;
 
@@ -338,4 +346,67 @@ footer {
 
 .multi-column {
   list-style-position: inside;
+}
+
+#topBar {
+  color: blue;
+  background-color: #F8F9FA;
+  width: 100%;
+  font-size: 2rem;
+}
+
+#footer {
+  padding-bottom: 10px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+@media only screen and (min-width:500px) {
+  
+  #headerText {
+    font-size: 20px;
+    
+    text-align: left;
+  }
+  .experience .floatLeft {
+    float: left;
+  }
+
+  .experience p {
+    float: left;
+    text-indent: 20pt;
+  }
+
+  .experience .floatRight {
+    float: right;
+    text-align: right;
+  }
+
+}
+
+@media only screen and (max-width:500px) {
+  .sidebar{
+    width: 40vw;
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
+}
+
+
+
+#homepage {
+  margin-top: 2vh;
+  padding: 2vh;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  font-size: 3vw;
+  background: white;
+  opacity: 0.90;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
 }

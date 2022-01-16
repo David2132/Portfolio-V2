@@ -2,10 +2,12 @@
 import { Modal, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import {BsFillPinMapFill,BsLinkedin} from "react-icons/bs";
+import { FaBars } from 'react-icons/fa';
 import {GrGithub} from "react-icons/gr";
 import ProfilePicture from "../images/profile_picture.jpg";
 import {MdEmail} from "react-icons/md";
 import resume from "../images/resume.pdf"
+import Sidebar from './Sidebar';
 const Header = () => {
     const [showModal, setModal] = useState(false);
 
@@ -17,32 +19,47 @@ const Header = () => {
         }, 2000)
     }
 
+    const [showNavBar, setNavBar] = useState(false)
+    const toggleNavBar = () => {
+        setNavBar(!showNavBar)
+    }
+
     return ( 
-        <header className="rightSideComponent" id="header">
-            <div >
-                <img src={ProfilePicture} id="profilePicture"/>
+        <header >
+           
+            <div id='topBar'>
+                <FaBars style={{cursor:"pointer"}} onClick={toggleNavBar}/>
+                <Sidebar
+                    showNavBar={showNavBar}
+                    toggleNavBar={toggleNavBar}
+                />
+            </div>
+            <div id="header">
+                
+                <img src={ProfilePicture} id="profilePicture" alt='ProfilePicture'/>
                 <a href={resume} without rel="noopener noreferrer" target="_blank">
                     <Button variant="success" id='resumeButton' style={{"color": "gold"}}> 
                         View Resume →
                     </Button>
                 </a>
-                <h3>David Duong</h3>
-                <h5>
-                    <a class="icon" onClick={copyEmail} style={{ "marginRight":"5px", "cursor": "pointer"}}>
+                <span id ="headerText" style={{"fontWeight":"bold"}}>
+                    David Duong
+                    <br/>
+                    <a className="icon" onClick={copyEmail} style={{ "marginRight":"5px", "cursor": "pointer"}}>
                         <MdEmail/> 
                     </a>
                     DavidDuong75@gmail.com
                     <br/>
-                    <BsFillPinMapFill class="icon"/> Houston, Texas
+                    <BsFillPinMapFill className="icon"/> Houston, Texas
                     <br/>
-                    <a href="https://www.linkedin.com" class="icon" style={{ "marginRight":"10px"}}>
+                    <a href="https://www.linkedin.com" className="icon" style={{ "marginRight":"10px"}}>
                         <BsLinkedin/>
                     </a> 
-                    <a href="https://www.github.com" class="icon">
+                    <a href="https://www.github.com" className="icon">
                         <GrGithub/>
                     </a>
                     
-                </h5>
+                </span>
             </div>
 
             <Modal
